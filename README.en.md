@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="SKILL.md" title="Read the full workflow">
-    <img src="assets/readme-craft-workflow.svg" alt="The four-step GitHub README Craft workflow: language selection, project verification, README delivery, and publishing checks." width="920">
+    <img src="assets/readme-craft-workflow.en.svg" alt="The four-step GitHub README Craft workflow: language selection, project verification, README delivery, and publishing checks." width="920">
   </a>
   <br>
   <sub>Workflow illustration. Select it to read the complete skill specification.</sub>
@@ -20,10 +20,10 @@ The skill helps an agent prepare a repository landing page without inventing fac
 
 | Stage | Agent action | Evidence produced |
 | --- | --- | --- |
-| 1. Language selection | Ask the user to choose a primary language and optional variants | Visible language links and the requested README files |
+| 1. Language selection | Reuse confirmed preferences; ask when missing | Visible language links and the requested README files |
 | 2. Project verification | Inspect code, manifests, examples, builds, and deployment configuration | Verified description, commands, and links |
 | 3. README delivery | Write the landing page, examples, installation path, and documentation entry points | A readable first-visitor experience |
-| 4. Publishing checks | Validate relative paths and common sensitive-content patterns | Documentation ready for public review |
+| 4. Publishing checks | Validate relative paths and common sensitive-content patterns | Pre-release checks and post-release inspection |
 
 See the [skill specification](SKILL.md) and the [README playbook](references/readme-playbook.md) for the full procedure.
 
@@ -67,7 +67,26 @@ The validator checks titles, relative image and link targets, and common local-p
 ├── README.md
 ├── README.en.md
 ├── agents/openai.yaml
-├── assets/readme-craft-workflow.svg
+├── assets/readme-craft-workflow.en.svg
 ├── references/readme-playbook.md
 └── scripts/validate_readme.py
 ```
+
+
+## Additional review criteria
+
+- Localize editable previews, captions and alt text alongside the README. Keep authentic screenshots faithful to the real UI.
+- Audit accidental assumptions inherited from the original project; separate model, script, host and human responsibilities.
+- Document genuinely supported hosts and distinguish file-copy, executable-test, discovery and complete-invocation evidence.
+- Distinguish code reuse, dependencies, inspiration and optional acknowledgments; retain required license notices.
+- Preserve explicit authorization for the same repository and scope; inspect the actual default-branch page after publication.
+
+## Batch checks and tests
+
+```bash
+python3 scripts/validate_readme.py README.md --repo-root . --variants README.en.md
+python3 scripts/validate_readme.py README.md --repo-root . --publish-files SKILL.md references/readme-playbook.md
+python3 -m unittest discover -s tests -v
+```
+
+Relative targets resolve from each README's directory. Space-containing and URL-encoded paths are supported. `--variants` checks the selected documents and their mutual links; `--publish-files` scans specified release texts relative to the repository root. Binary assets need separate review. External URLs, anchors, translation quality, installation and visual behavior are not verified. Pattern scanning cannot establish the absence of all sensitive content.

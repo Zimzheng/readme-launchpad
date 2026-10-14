@@ -1,6 +1,6 @@
 # GitHub README playbook
 
-Use this reference after the user has chosen the README languages and the
+Use this reference after the user has supplied or confirmed the README languages and the
 repository has been inspected.
 
 ## 1. Information architecture
@@ -64,7 +64,7 @@ from “clone source to contribute”.
 
 ## 4. Language variants
 
-Ask for this before drafting. Use the requested primary language in `README.md`.
+Ask only if the task lacks an explicit choice; reuse confirmed preferences during follow-up edits. Use the requested primary language in `README.md`.
 When optional variants are requested, make each a maintained peer document:
 
 ```md
@@ -93,3 +93,63 @@ to nonexistent files.
   page, with deeper material moved into documentation.
 - usman-idris/readme-examples: screenshots, GIFs, clear descriptions, demos and
   short installation paths are recurring characteristics of effective READMEs.
+
+
+## 6. Language assets and generalization
+
+Treat each requested language version as a complete reading experience: body,
+editable preview, caption, alt text and linked example instructions. Use separate
+localized illustrations when their embedded text is meaningful. Label mockups as
+illustrations. Do not translate an authentic screenshot into a purported real UI.
+
+Audit a reusable project's positioning for inherited client assumptions: named
+customers, domain jargon, value claims, fixed steps, default duration, chapter
+counts and oddly specific exclusions. Replace accidental assumptions with the
+project's actual supported scope. Keep useful examples, marked as examples;
+generalization does not require deleting the project's intentional specialty.
+
+## 7. Capability and installation evidence
+
+Separate model-generated work, deterministic scripts, host features and user
+judgment. For supported hosts, document native discovery location, invocation,
+prerequisites and applicable local/project/cloud scope. For hosts without a native
+mechanism, describe manual instruction loading without claiming installation.
+Use official documentation for changing conventions and record when checked.
+
+Do not collapse these evidence levels:
+
+| Evidence | What it establishes |
+|---|---|
+| Files copied to destination | Installer behavior, not host discovery |
+| Script tests passed | Tested executable behavior, not model writing quality |
+| Host recognized skill | Discovery, not a complete successful invocation |
+| End-to-end invocation | The tested host and scenario only |
+| Published page inspected | Observed rendering and navigation only |
+
+## 8. Attribution and release acceptance
+
+Reused code or assets require examining their licenses and preserving applicable
+notices. Runtime dependencies belong in setup documentation. Inspiration can be
+acknowledged optionally with accurate wording, before the license section in each
+README. Do not describe a consulted project as a dependency or imply code reuse
+without evidence. Optional acknowledgments do not replace required notices.
+
+Reuse explicit authorization for the same publishing destination and scope.
+Prepare reviewable files before seeking any new authorization. After publishing,
+check the actual default branch, localized images, language switches, demo
+landing pages and intended remote contents. Synchronize promised archives and
+local copies. Record what could not be tested without claiming success.
+
+The validator accepts multiple README variants and an explicit release file list:
+
+```sh
+python3 scripts/validate_readme.py README.md --repo-root . --variants README.en.md
+python3 scripts/validate_readme.py README.md --repo-root . --publish-files SKILL.md references/readme-playbook.md
+```
+
+Relative links resolve from each document's directory; root-relative links resolve
+from the repository root. URL-encoded paths and angle-bracket paths with spaces
+are supported. The scanner skips fenced examples and inline code when resolving
+links, but scans the complete text for common credential and local-path patterns.
+External URL availability, anchor validity, factual claims, locale correctness and
+binary privacy require separate review. It does not execute installation commands.

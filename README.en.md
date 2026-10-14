@@ -1,4 +1,4 @@
-# GitHub README Craft
+# README Launchpad
 
 [简体中文](README.md) · [English](README.en.md)
 
@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="SKILL.md" title="Read the full workflow">
-    <img src="assets/readme-craft-workflow.en.svg" alt="The four-step GitHub README Craft workflow: language selection, project verification, README delivery, and publishing checks." width="920">
+    <img src="assets/readme-launchpad-workflow.en.svg" alt="The four-step README Launchpad workflow: language selection, project verification, README delivery, and publishing checks." width="920">
   </a>
   <br>
   <sub>Workflow illustration. Select it to read the complete skill specification.</sub>
@@ -31,20 +31,20 @@ See the [skill specification](SKILL.md) and the [README playbook](references/rea
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-git clone https://github.com/Zimzheng/github-readme-craft.git "${CODEX_HOME:-$HOME/.codex}/skills/github-readme-craft"
+git clone https://github.com/Zimzheng/readme-launchpad.git "${CODEX_HOME:-$HOME/.codex}/skills/readme-launchpad"
 ```
 
 To update an existing clone:
 
 ```bash
-cd "${CODEX_HOME:-$HOME/.codex}/skills/github-readme-craft"
+cd "${CODEX_HOME:-$HOME/.codex}/skills/readme-launchpad"
 git pull --ff-only
 ```
 
 ## Use
 
 ```text
-Use $github-readme-craft to improve the README in this repository.
+Use $readme-launchpad to improve the README in this repository.
 Primary language: Simplified Chinese. Optional language: English.
 ```
 
@@ -67,7 +67,7 @@ The validator checks titles, relative image and link targets, and common local-p
 ├── README.md
 ├── README.en.md
 ├── agents/openai.yaml
-├── assets/readme-craft-workflow.en.svg
+├── assets/readme-launchpad-workflow.en.svg
 ├── references/readme-playbook.md
 └── scripts/validate_readme.py
 ```

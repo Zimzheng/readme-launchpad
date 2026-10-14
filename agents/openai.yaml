@@ -1,4 +1,4 @@
 interface:
-  display_name: "GitHub README 工坊"
+  display_name: "README 发布助手"
   short_description: "生成带演示、安装命令和发布检查的高质量 GitHub README"
-  default_prompt: "Use $github-readme-craft to create or improve this repository's README. Ask me to choose its primary and optional languages first."
+  default_prompt: "Use $readme-launchpad to create or improve this repository's README. Use my confirmed language preferences; ask only when missing."

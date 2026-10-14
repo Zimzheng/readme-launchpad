@@ -1,9 +1,9 @@
 ---
-name: github-readme-craft
+name: readme-launchpad
 description: Create or revise a high-quality GitHub README with language selection, verified installation steps, clickable visual demos, and privacy-aware publishing checks. Use for repository landing pages, README rewrites, and GitHub documentation polish.
 ---
 
-# GitHub README Craft
+# README Launchpad
 
 Create a README that lets a new visitor understand the project, see a credible
 example, install it, and take the next useful action without reading the code.

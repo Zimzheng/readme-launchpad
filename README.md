@@ -1,4 +1,4 @@
-# GitHub README 工坊
+# README Launchpad · README 发布助手
 
 [简体中文](README.md) · [English](README.en.md)
 
@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="SKILL.md" title="查看完整工作流说明">
-    <img src="assets/readme-craft-workflow.svg" alt="GitHub README 工坊的四步工作流：语言选择、项目核验、README 交付与发布检查。" width="920">
+    <img src="assets/readme-launchpad-workflow.svg" alt="README 发布助手的四步工作流：语言选择、项目核验、README 交付与发布检查。" width="920">
   </a>
   <br>
   <sub>工作流示意图：点击查看技能的完整执行规范。</sub>
@@ -51,26 +51,26 @@ GitHub README 是新访客理解项目、判断是否值得尝试并完成首次
 
 ```bash
 mkdir -p "${CODEX_HOME:-$HOME/.codex}/skills"
-git clone https://github.com/Zimzheng/github-readme-craft.git "${CODEX_HOME:-$HOME/.codex}/skills/github-readme-craft"
+git clone https://github.com/Zimzheng/readme-launchpad.git "${CODEX_HOME:-$HOME/.codex}/skills/readme-launchpad"
 ```
 
 如果已克隆过该仓库，在其目录内更新：
 
 ```bash
-cd "${CODEX_HOME:-$HOME/.codex}/skills/github-readme-craft"
+cd "${CODEX_HOME:-$HOME/.codex}/skills/readme-launchpad"
 git pull --ff-only
 ```
 
 ### 其他支持 `SKILL.md` 的 Agent
 
-本仓库采用通用的 `SKILL.md` 目录结构。将整个 `github-readme-craft` 目录克隆或复制到目标 Agent 已配置的 skills 根目录，并保留其中的 `agents/`、`references/`、`scripts/` 与 `assets/` 子目录。目标 Agent 的技能目录位置以其官方文档或本地配置为准。
+本仓库采用通用的 `SKILL.md` 目录结构。将整个 `readme-launchpad` 目录克隆或复制到目标 Agent 已配置的 skills 根目录，并保留其中的 `agents/`、`references/`、`scripts/` 与 `assets/` 子目录。目标 Agent 的技能目录位置以其官方文档或本地配置为准。
 
 ## 使用
 
 在任务中直接引用技能，并在同一条请求中给出语言选择即可：
 
 ```text
-使用 $github-readme-craft 优化当前仓库的 README。
+使用 $readme-launchpad 优化当前仓库的 README。
 主语言为简体中文，英文作为辅助语言。
 ```
 
@@ -104,7 +104,7 @@ python3 scripts/validate_readme.py README.en.md --repo-root .
 ├── README.md                        # 中文主 README
 ├── README.en.md                     # 英文辅助 README
 ├── agents/openai.yaml               # Codex 界面元数据
-├── assets/readme-craft-workflow.svg # GitHub 首页工作流图
+├── assets/readme-launchpad-workflow.svg # GitHub 首页工作流图
 ├── references/readme-playbook.md    # README 信息架构与视觉演示规范
 └── scripts/validate_readme.py       # 零依赖校验器
 ```

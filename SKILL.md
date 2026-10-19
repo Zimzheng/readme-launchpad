@@ -1,12 +1,28 @@
 ---
 name: readme-launchpad
-description: Create or revise a high-quality GitHub README with language selection, verified installation steps, clickable visual demos, and privacy-aware publishing checks. Use for repository landing pages, README rewrites, and GitHub documentation polish.
+description: Create, improve, or audit GitHub project READMEs with tailored visual layouts, verified quick starts, clickable demos, and privacy-aware publishing checks. Use for repository landing pages, README design, targeted documentation fixes, and release-readiness reviews.
 ---
 
 # README Launchpad
 
 Create a README that lets a new visitor understand the project, see a credible
 example, install it, and take the next useful action without reading the code.
+
+## Choose the task scope
+
+Route from the user's request; ask only when the intended scope is unclear:
+
+- **Create or redesign:** discover the product, choose a visual direction, and
+  draft the page around the primary reader's first successful use.
+- **Targeted improvement:** edit the requested sections and dependent links or
+  translations only. Preserve the existing identity and unrelated content.
+- **Audit:** report prioritized findings with file locations and concrete fixes;
+  do not edit unless requested.
+
+Identify the primary reader (evaluator, user, contributor, or operator) and the
+project's distribution model. A published package, source-only project, hosted
+app, and research artifact need different quick starts. Check publication before
+suggesting a package install; distinguish using the product from building it.
 
 ## Preserve the task context
 
@@ -35,6 +51,21 @@ language assets, host installation, attribution, or release evidence.
 - When generalizing a project, inspect claims, terms, examples, defaults and
   exclusions for assumptions inherited from the original client or use case.
   Retain intentional domain scope; do not broaden the product beyond evidence.
+
+## Design the page
+
+For creation, redesign, or visual polish, read
+[visual-design.md](references/visual-design.md). Preserve a user-specified style;
+otherwise choose a suitable direction and briefly state the choice. Do not block
+progress on an optional aesthetic preference.
+
+Deliver the actual Markdown layout and useful visual assets when tools permit.
+A title, badge wall, and decorative banner alone do not establish visual quality.
+Choose evidence of the product's result; keep setup commands as copyable text.
+Use available image/design tools only when they add value. Never make an external
+README generator, image skill, API key, or hosted service a required dependency.
+If the user requests readme-ai, treat its output as a draft: verify facts and
+commands, remove generic sections, and inspect the final GitHub-compatible page.
 
 ## Build the README
 
@@ -82,7 +113,11 @@ language assets, host installation, attribution, or release evidence.
 
 ## Verify before handoff
 
-Run `scripts/validate_readme.py README.md --repo-root . --variants README.en.md`
+Read [verification.md](references/verification.md) for scoped checks and handoff.
+For targeted edits, verify the affected flow rather than rebuilding the project.
+
+Run the skill's `scripts/validate_readme.py` with the target repository paths, e.g.
+`python3 /path/to/skill/scripts/validate_readme.py README.md --repo-root . --variants README.en.md`
 (adapt the variant list to the task) when Python is
 available. Resolve its errors and review warnings. Also render or inspect visual
 assets when possible, test the shortest documented install path, and verify that

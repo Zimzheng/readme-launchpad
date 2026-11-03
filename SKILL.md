@@ -24,6 +24,27 @@ project's distribution model. A published package, source-only project, hosted
 app, and research artifact need different quick starts. Check publication before
 suggesting a package install; distinguish using the product from building it.
 
+## Keep the README about the current product
+
+A README explains what the project does now, who it serves, and how to use it. For a general
+update, reassess the whole page against current behavior instead of appending a version-specific
+"what changed" section. Put release history and migration details in release notes, a changelog or
+linked migration guidance. Keep version numbers only where needed for installation, compatibility,
+a supported-version policy or an explicitly requested release-focused README.
+
+Within the authorized scope, remove or rewrite stale defaults, claims, commands, screenshots,
+comparisons and limitations. Consolidate duplicate capability statements. Update existing sections
+and requested translations together; adding a correct paragraph does not fix contradictory old text.
+For a targeted edit, preserve unrelated material and report broader findings without expanding scope.
+
+Organize around the reader's decisions: understand the result, judge a credible example, see the
+capabilities, install, use, and find relevant limits. This is a reading sequence, not a mandatory
+section template. Prefer a few concrete outcomes over exhaustive implementation inventories.
+
+Keep attribution accurate and brief near the end, with links to preserved notices and licenses.
+A long upstream comparison or innovation inventory belongs in a linked document unless choosing
+between projects is a central reader task or the user asks for it. Never remove required notices.
+
 ## Preserve the task context
 
 Use the user's explicitly selected primary and optional languages. Ask only when

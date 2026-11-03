@@ -153,3 +153,36 @@ are supported. The scanner skips fenced examples and inline code when resolving
 links, but scans the complete text for common credential and local-path patterns.
 External URL availability, anchor validity, factual claims, locale correctness and
 binary privacy require separate review. It does not execute installation commands.
+
+## 9. Whole-page maintenance and editorial compression
+
+For a general README refresh:
+
+1. Establish the current product contract from source and working entry points.
+2. Audit the whole existing page: positioning, examples, defaults, installation, usage, capabilities,
+   limitations, attribution and language variants. Identify outdated claims and repeated explanations.
+3. Rewrite the existing narrative around current use. Remove stale prose rather than layering a
+   release announcement over it. Preserve unique operational details and required legal notices.
+4. Prefer actual output previews over legacy style samples when they better demonstrate the result.
+   Keep contextual labels and links to editable sources; do not invent demos to fill a section.
+5. Compress upstream history into accurate attribution plus a notice link. Keep a comparison only
+   when it helps readers choose the product, and move detailed provenance to maintained references.
+6. Verify that a first-time reader can identify the product, result and next action without knowing
+   previous releases. Check translations for equivalent claims, not necessarily identical wording.
+
+Example: replace "v1.2 changes and limits" with current capability and limits descriptions; update
+old "always ask for a style" wording when the product now chooses autonomously. This example is an
+editorial pattern, not a requirement that every project supports autonomous selection.
+
+Acceptance checks (editorial judgment, not keyword bans):
+
+- No update-only section is the sole explanation of a current capability.
+- No old default or upstream description contradicts the new overview.
+- Attribution remains accurate without dominating the primary reader journey.
+- Installation requirements and material limitations survive compression.
+- Version numbers remain where functionally needed; do not strip compatibility instructions.
+- A targeted installation fix does not trigger an unsolicited whole-page rewrite.
+- Release history remains appropriate when explicitly requested or central to the repository.
+
+Do not add brittle tests that reject version headings or enforce one section order. Mechanical
+validation checks links and common publishing risks; it cannot determine editorial clarity.
